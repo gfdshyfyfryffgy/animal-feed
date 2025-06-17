@@ -1,7 +1,6 @@
 import React from "react";
 import hen from "../assets/hen.jpg";
 import { Link } from "react-router-dom";
-// import RotatingText from "./RotatingText/RotatingText";
 export default function HeroSection() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
