@@ -170,22 +170,21 @@ export default function Navbar() {
                 onMouseEnter={() => setProductsHover(true)}
                 onMouseLeave={() => setProductsHover(false)}
               >
-                <li>
-                  <Link
-                    to={item.path}
-                    className={`hover:text-[#8AB2A6] ${isActive(item.path) ? "text-[#8AB2A6] font-semibold" : ""
-                      }`}
-                  >
-                    {item.name}
-                  </Link>
+                <li
+                  className={`hover:text-[#8AB2A6] cursor-default ${
+                    isActive(item.path) ? "text-[#8AB2A6] font-semibold" : ""
+                  }`}
+                >
+                  <span>{item.name}</span>
                 </li>
               </div>
             ) : (
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  className={`hover:text-[#8AB2A6] ${isActive(item.path) ? "text-[#8AB2A6] font-semibold" : ""
-                    }`}
+                  className={`hover:text-[#8AB2A6] ${
+                    isActive(item.path) ? "text-[#8AB2A6] font-semibold" : ""
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -198,18 +197,18 @@ export default function Navbar() {
       {/* Mega Menu */}
       {productsHover && (
         <div
-  className="absolute left-0 right-0 top-full mt-[-25px] z-50 shadow-lg rounded-2xl max-h-[80vh] overflow-y-auto"
-  onMouseEnter={() => setProductsHover(true)}
-  onMouseLeave={() => setProductsHover(false)}
->
-
+          className="absolute left-0 right-0 top-full mt-[-25px] z-50 shadow-lg rounded-2xl max-h-[80vh] overflow-y-auto"
+          onMouseEnter={() => setProductsHover(true)}
+          onMouseLeave={() => setProductsHover(false)}
+        >
           <div className="max-w-7xl mx-auto bg-white shadow-xl rounded-b-2xl border-t border-gray-200 px-8 py-10">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
               {categories.map((menu, index) => (
                 <div
                   key={index}
-                  className={`px-2 ${index !== 0 ? "border-l border-gray-200" : ""
-                    }`}
+                  className={`px-2 ${
+                    index !== 0 ? "border-l border-gray-200" : ""
+                  }`}
                 >
                   <Link
                     to={`/${menu.prefix}`}
@@ -259,8 +258,9 @@ export default function Navbar() {
               <Link
                 to={item.path}
                 onClick={() => setMenuOpen(false)}
-                className={`block hover:text-[#8AB2A6] ${isActive(item.path) ? "text-[#8AB2A6] font-semibold" : ""
-                  }`}
+                className={`block hover:text-[#8AB2A6] ${
+                  isActive(item.path) ? "text-[#8AB2A6] font-semibold" : ""
+                }`}
               >
                 {item.name}
               </Link>
