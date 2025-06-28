@@ -1,11 +1,13 @@
-import React from "react";
-import hen from "../assets/hen.jpg"; // Adjust the path as necessary
+import React, { useEffect } from "react";
+import hen from "../assets/hen.png";
+import dog from "../assets/dog.jpg";
+import henfeed from "../assets/henfeed.jpg";
+import certificate1 from "../assets/certificate1.jpg";
+import certificate2 from "../assets/certificate2.jpg";
+import certificate3 from "../assets/certificate3.jpg";
 import { Link } from "react-router-dom";
-import dog from "../assets/dog.jpg"; // Adjust the path as necessary
-import henfeed from "../assets/henfeed.jpg"; // Adjust the path as necessary
-import certificate1 from  "../assets/certificate1.jpg"
-import certificate3 from  "../assets/certificate3.jpg"
-import certificate2 from  "../assets/certificate2.jpg"// Adjust the path as necessary
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   Leaf,
   Star,
@@ -15,36 +17,56 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+// Brand palette
+const PALETTE = {
+  cream: "#FFF8E8",
+  lightCream: "#F7EED3",
+  greenish: "#AAB396",
+  darkBrown: "#674636",
+};
+
 const values = [
   {
-    icon: <Leaf className="text-green-600 w-8 h-8 mb-3" />,
+    icon: <Leaf />,
     title: "Sustainability First",
     desc: "We prioritize eco-friendly solutions for long-term farming success.",
+    iconBg: PALETTE.lightCream,
+    iconColor: PALETTE.greenish,
   },
   {
-    icon: <Star className="text-yellow-500 w-8 h-8 mb-3" />,
+    icon: <Star />,
     title: "Quality & Excellence",
     desc: "Our products are rigorously tested for quality and performance.",
+    iconBg: PALETTE.lightCream,
+    iconColor: PALETTE.darkBrown,
   },
   {
-    icon: <Handshake className="text-blue-500 w-8 h-8 mb-3" />,
+    icon: <Handshake />,
     title: "Partnership",
     desc: "We grow together with our farmers and ecosystem partners.",
+    iconBg: PALETTE.lightCream,
+    iconColor: PALETTE.greenish,
   },
   {
-    icon: <Lightbulb className="text-purple-600 w-8 h-8 mb-3" />,
+    icon: <Lightbulb />,
     title: "Innovation",
     desc: "We improve continuously using scientific feedback and data.",
+    iconBg: PALETTE.lightCream,
+    iconColor: PALETTE.darkBrown,
   },
   {
-    icon: <Eye className="text-teal-600 w-8 h-8 mb-3" />,
+    icon: <Eye />,
     title: "Transparency",
     desc: "We’re open about our processes, results, and commitments.",
+    iconBg: PALETTE.lightCream,
+    iconColor: PALETTE.greenish,
   },
   {
-    icon: <ShieldCheck className="text-red-500 w-8 h-8 mb-3" />,
+    icon: <ShieldCheck />,
     title: "Responsibility",
     desc: "We hold ourselves to the highest standards of accountability.",
+    iconBg: PALETTE.lightCream,
+    iconColor: PALETTE.darkBrown,
   },
 ];
 
@@ -69,146 +91,186 @@ const certificates = [
   },
 ];
 
-
-
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
   return (
     <>
-      <div className="py-16 px-6 md:px-20 bg-green-500 mt-10 w-100%">
+      {/* Hero Section */}
+      <div
+        className="py-16 px-6 md:px-20"
+        style={{ background: "linear-gradient(120deg, #F6F1DE 0%, #E4E9F7 100%)" }}
+      >
         <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
-            <h2 className="text-5xl font-bold mb-4 text-white">About Us</h2>
-            <p className="text-white">
-              NutriPlanet is dedicated to providing high-quality, sustainable
-              animal feed solutions. We combine science and care to support
-              healthy livestock and a greener planet.
+          <div className="md:w-1/2" data-aos="fade-right">
+            <h2 className="text-5xl font-bold mb-4" style={{ color: PALETTE.darkBrown }}>
+              About Us
+            </h2>
+            <p className="font-bold" style={{ color: PALETTE.darkBrown }}>
+              NutriPlanet is dedicated to providing high-quality, sustainable animal feed solutions. We combine science and care to support healthy livestock and a greener planet.
             </p>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 flex justify-center" data-aos="fade-left">
             <img
-              src={henfeed}
+              src={hen}
               alt="Eco-Friendly Ingredients"
-              className="rounded-lg shadow-md w-full object-cover"
+            
             />
           </div>
         </div>
       </div>
-      <div className="bg-white text-gray-800 px-6 md:px-16 lg:px-32 py-16 space-y-20">
-        {/* Section 1: Introduction */}
+
+      {/* Intro Section */}
+      <div
+        className="px-6 md:px-16 lg:px-32 py-20 space-y-24"
+       style={{ backgroundColor: "#AAB396" }}
+      >
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">
+          <div data-aos="fade-right">
+            <h2 className="text-3xl font-bold mb-4 text-[#3E3F5B]">
               Transforming Animal Nutrition Since 2018
             </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Our company was founded with a mission to provide high-quality,
-              science-based animal feed solutions. Since 2018, we have been
-              dedicated to improving animal health and farm productivity.
+            <p className="leading-relaxed text-bold text-[#3E3F5B]">
+              Our company was founded with a mission to provide high-quality, science-based animal feed solutions. Since 2018, we have been dedicated to improving animal health and farm productivity.
               <br />
               <br />
-              With a focus on research, innovation, and sustainability, we
-              continue to serve thousands of customers across the region.
+              With a focus on research, innovation, and sustainability, we continue to serve thousands of customers across the region.
             </p>
           </div>
-          <div className="bg-gray-100 h-64 rounded-xl flex items-center justify-center">
-            {/* Placeholder for image */}
+          <div
+            className="h-64 rounded-xl overflow-hidden shadow-md flex items-center"
+            style={{ backgroundColor: PALETTE.lightCream }}
+            data-aos="fade-left"
+          >
             <img
               src={dog}
               alt="About Us"
-              className="rounded-lg shadow-md w-full h-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </section>
+     
 
-        {/* Section 2: Stats & Mission/Vision */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-800">
-          {/* Key Highlights */}
-          <div className="bg-white shadow-sm rounded-xl p-6 border border-gray-100 hover:shadow-md transition">
-            <h3 className="text-2xl font-semibold mb-4 text-green-700">
+        {/* Highlights + Mission */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div
+            className="shadow-md rounded-xl p-8 border hover:shadow-lg transition"
+            style={{ backgroundColor: PALETTE.cream, borderColor: PALETTE.lightCream, color: PALETTE.darkBrown }}
+            data-aos="fade-up"
+          >
+            <h3 className="text-2xl font-semibold mb-4" style={{ color: PALETTE.greenish }}>
               Key Highlights
             </h3>
-            <ul className="space-y-3 text-sm text-gray-600">
+            <ul className="space-y-3 text-base">
+              <li className="flex items-start gap-2">✔ 1000+ Happy Farmers</li>
               <li className="flex items-start gap-2">
-                <span className="text-green-500">✔</span> 1000+ Happy Farmers
+                ✔ 80% Lower Cost for Farmers
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-green-500">✔</span> 80% Lower Cost for
-                Farmers
+                ✔ 70% Better Feed Efficiency
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500">✔</span> 70% Better Feed
-                Efficiency
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500">✔</span> 6x Yearly Growth
-              </li>
+              <li className="flex items-start gap-2">✔ 6x Yearly Growth</li>
             </ul>
           </div>
-
-          {/* Mission & Vision */}
-          <div className="bg-white shadow-sm rounded-xl p-6 border border-gray-100 hover:shadow-md transition">
-            <h3 className="text-2xl font-semibold mb-4 text-green-700">
+          <div
+            className="shadow-md rounded-xl p-8 border hover:shadow-lg transition"
+            style={{ backgroundColor: PALETTE.cream, borderColor: PALETTE.lightCream, color: PALETTE.darkBrown }}
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <h3 className="text-2xl font-semibold mb-4" style={{ color: PALETTE.greenish }}>
               Our Mission
             </h3>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              To deliver sustainable, effective feed solutions that increase
-              productivity and promote animal well-being.
+            <p className="leading-relaxed mb-4">
+              To deliver sustainable, effective feed solutions that increase productivity and promote animal well-being.
             </p>
-            <h3 className="text-2xl font-semibold mb-4 text-green-700">
+            <h3 className="text-2xl font-semibold mb-4" style={{ color: PALETTE.greenish }}>
               Our Vision
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              To become a global leader in animal nutrition by empowering
-              farmers with innovative, affordable solutions.
+            <p className="leading-relaxed">
+              To become a global leader in animal nutrition by empowering farmers with innovative, affordable solutions.
             </p>
           </div>
         </section>
+           </div>
 
-        {/* Section 3: Core Values */}
-        <section className="bg-gray-50 py-20 px-4 md:px-16 lg:px-32 w-100%">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+        {/* Core Values */}
+        <section
+          className="py-20 px-4 md:px-16 lg:px-32"
+          style={{ backgroundColor: PALETTE.lightCream }}
+        >
+          <h2
+            className="text-4xl font-bold text-center mb-16"
+            style={{ color: PALETTE.darkBrown }}
+            data-aos="fade-up"
+          >
             What Drives Us Forward
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {values.map((value, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 border border-gray-100"
+                className="rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 border"
+                style={{
+                  backgroundColor: PALETTE.cream,
+                  borderColor: PALETTE.lightCream,
+                  color: PALETTE.darkBrown,
+                }}
+                data-aos="zoom-in-up"
+                data-aos-delay={i * 100}
               >
                 <div className="flex justify-center mb-4">
-                  <div className="bg-green-100 rounded-full p-4">
-                    {React.cloneElement(value.icon, { className: "w-6 h-6" })}
+                  <div
+                    className="rounded-full p-4"
+                    style={{
+                      backgroundColor: value.iconBg,
+                    }}
+                  >
+                    {React.cloneElement(value.icon, {
+                      style: { color: value.iconColor, width: "2rem", height: "2rem" },
+                    })}
                   </div>
                 </div>
-                <h4 className="text-xl font-semibold text-center text-gray-800 mb-3">
+                <h4 className="text-xl font-semibold text-center mb-3">
                   {value.title}
                 </h4>
-                <p className="text-sm text-center text-gray-600 leading-relaxed">
+                <p className="text-sm text-center leading-relaxed">
                   {value.desc}
                 </p>
               </div>
             ))}
           </div>
         </section>
-        <section>
-          <div className="bg-green-600 text-white py-12 px-6 md:px-16 rounded-xl shadow-md mt-16">
+
+        {/* CTA Banner */}
+        <section data-aos="fade-up">
+          <div
+            className="py-12 px-6 md:px-16 rounded-xl shadow-md"
+            style={{
+              backgroundColor: PALETTE.greenish,
+              color: PALETTE.cream,
+            }}
+          >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-              {/* Left Side: Text */}
               <div className="md:w-1/2 space-y-3">
                 <h3 className="text-2xl md:text-3xl font-bold">
                   Why Choose Our Feed Solutions?
                 </h3>
-                <p className="text-white text-sm md:text-base leading-relaxed">
-                  Trusted by thousands of farmers, our science-backed,
-                  eco-friendly feed improves livestock health and increases
-                  productivity — sustainably.
+                <p className="text-sm md:text-base leading-relaxed">
+                  Trusted by thousands of farmers, our science-backed, eco-friendly feed improves livestock health and increases productivity — sustainably.
                 </p>
               </div>
-
-              {/* Right Side: Actions */}
               <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6">
                 <Link to="/contact">
-                  <button className="bg-white text-green-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-100 transition w-48 text-center">
+                  <button
+                    className="font-semibold px-6 py-2 rounded-md transition w-48 text-center"
+                    style={{
+                      backgroundColor: PALETTE.cream,
+                      color: PALETTE.darkBrown,
+                    }}
+                  >
                     Contact Us
                   </button>
                 </Link>
@@ -216,37 +278,51 @@ const About = () => {
             </div>
           </div>
         </section>
-      </div>
-     <section className="py-16 px-6 md:px-20 bg-white text-gray-800">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-sm font-semibold text-green-600 uppercase mb-2">
-          Recognized Excellence
-        </p>
-        <h2 className="text-4xl font-bold mb-4">Our Certifications</h2>
-        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-          Our commitment to sustainability is validated by leading industry certifications.
-        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((cert, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow hover:shadow-md transition"
+        {/* Certificates */}
+        <section
+          className="py-20 px-6 md:px-20"
+          data-aos="fade-up"
+          style={{ backgroundColor: PALETTE.cream, color: PALETTE.darkBrown }}
+        >
+          <div className="max-w-6xl mx-auto text-center">
+            <p
+              className="text-sm font-semibold uppercase mb-2"
+              style={{ color: PALETTE.greenish, letterSpacing: "0.12em" }}
             >
-              <img
-                src={cert.icon}
-                alt={cert.title}
-                className="w-16 h-16 mx-auto mb-4 object-contain"
-              />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {cert.title}
-              </h3>
-              <p className="text-sm text-gray-600">{cert.description}</p>
+              Recognized Excellence
+            </p>
+            <h2 className="text-4xl font-bold mb-4">Our Certifications</h2>
+            <p className="text-lg mb-12 max-w-2xl mx-auto">
+              Our commitment to sustainability is validated by leading industry certifications.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {certificates.map((cert, index) => (
+                <div
+                  key={index}
+                  className="border rounded-2xl p-6 shadow hover:shadow-md transition"
+                  style={{
+                    backgroundColor: PALETTE.lightCream,
+                    borderColor: PALETTE.greenish,
+                  }}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <img
+                    src={cert.icon}
+                    alt={cert.title}
+                    className="w-16 h-16 mx-auto mb-4 object-contain"
+                  />
+                  <h3 className="text-xl font-semibold mb-2">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm">{cert.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
+      
     </>
   );
 };
