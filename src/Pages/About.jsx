@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import hen from "../assets/hen.png";
 import dog from "../assets/dog.jpg";
-import henfeed from "../assets/henfeed.jpg";
 import certificate1 from "../assets/certificate1.jpg";
 import certificate2 from "../assets/certificate2.jpg";
 import certificate3 from "../assets/certificate3.jpg";
@@ -326,5 +325,6 @@ const About = () => {
     </>
   );
 };
+console.log("About component:", About);
 
 export default About;

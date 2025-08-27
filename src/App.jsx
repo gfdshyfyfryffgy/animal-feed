@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./Pages/ScrollToTop";
 import Home from "./components/Home";
-import About from "./pages/About";
+import About from "./Pages/About";
 import ContactSection from "./Pages/ContactSection";
-import Products from "./pages/Products";
+import Products from "./Pages/Products";
 import Careers from "./Pages/Careers";
 
 // Chilled
