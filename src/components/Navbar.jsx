@@ -151,7 +151,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <h1 className="text-2xl font-bold" style={{ color: "#3E3F5B" }}>
           <Link to="/" onClick={() => setMenuOpen(false)}>
-            NutriPlanet
+            Vedagroup
           </Link>
         </h1>
 
@@ -161,7 +161,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <ul className="hidden md:flex space-x-6 text-sm font-medium">
+        <ul className="hidden md:flex space-x-6 text-sm font-medium text-10xl text-[#3E3F5B]">
           {navItems.map((item) =>
             item.name === "Products" ? (
               <div
