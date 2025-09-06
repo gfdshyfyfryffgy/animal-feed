@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 rounded mr-3" style={{ backgroundColor: '#8AB2A6' }} />
-              <span className="text-xl font-bold text-white">NutriPlanet</span>
+              <span className="text-xl font-bold text-white">Vedagroup</span>
             </div>
             <p className="text-sm mb-4">
               Revolutionizing animal feed with sustainable solutions for a better planet.
@@ -81,7 +81,7 @@ export default function Footer() {
             <p className="text-sm">123 Green Street, Eco City, 10001</p>
             <p className="text-sm mt-2">
               <a href="mailto:info@nutriplanet.com" className="hover:text-white">
-                info@nutriplanet.com
+                info@Vedagroup.com
               </a>
             </p>
             <p className="text-sm mt-2">
@@ -94,7 +94,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-[#4B4C66] mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-[#fff]">
-          <p>&copy; 2025 NutriPlanet. All rights reserved.</p>
+          <p>&copy; 2025 Vedagroup. All rights reserved.</p>
           <div className="space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="hover:text-white cursor-pointer">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white cursor-pointer">Terms of Service</Link>
