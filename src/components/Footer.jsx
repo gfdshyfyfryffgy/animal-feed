@@ -78,7 +78,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <p className="text-sm">123 Green Street, Eco City, 10001</p>
+            <p className="text-sm">Bosa Ram Chowk, Panipat City, 132103</p>
             <p className="text-sm mt-2">
               <a href="mailto:info@nutriplanet.com" className="hover:text-white">
                 info@Vedagroup.com

@@ -33,7 +33,7 @@ export default function Kodo() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-8">
           <div className="w-full md:w-1/2" data-aos="fade-right">
             <h1 className="text-6xl font-extrabold" style={{ color: COLORS.heading }}>
-              Garlic
+              Kodo
             </h1>
           </div>
           <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
@@ -46,7 +46,7 @@ export default function Kodo() {
       <div style={{ background: COLORS.accent, padding: "3rem 0" }}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 px-6">
           <div data-aos="fade-up">
-            <h2 className="text-xl font-bold mb-3 text-[#40642C]">Chilled Garlic Features</h2>
+            <h2 className="text-xl font-bold mb-3 text-[#40642C]">Kodo Features</h2>
             <ul className="list-disc list-inside space-y-2 text-[#40642C] text-[1.08rem] font-medium">
               <li>Whole and Peeled available</li>
               <li>Natural aroma retained in cold storage</li>
@@ -56,7 +56,7 @@ export default function Kodo() {
           <div data-aos="fade-up" data-aos-delay="150">
             <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Chilled Garlic</h2>
             <p className="text-[1.07rem] font-medium" style={{ color: COLORS.heading, lineHeight: 1.7 }}>
-              Our garlic products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
+              Our Kodo products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
             </p>
           </div>
         </div>
