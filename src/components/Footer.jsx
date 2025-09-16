@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const products = [
-  { name: 'Livestock Feed', path: '/products#livestock' },
   { name: 'Poultry Feed', path: '/products#poultry' },
   { name: 'Aquaculture Feed', path: '/products#aquaculture' },
   { name: 'Specialty Feed', path: '/products#specialty' },

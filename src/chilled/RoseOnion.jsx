@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.jpg";
+import r1 from "../assets/products/roseonion.png";
 
 const COLORS = {
   heading: "#3E3F5B",
@@ -38,7 +38,7 @@ export default function RoseOnion() {
             </h1>
           </div>
           <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src={hen} alt="Rose Onion" className="object-contain" style={{ width: 410, height: 410 }} />
+            <img src={r1} alt="Rose Onion" className="object-contain" style={{ width: 410, height: 410 }} />
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.png"; // Use a real onion image if available
-
+import o1 from "../assets/products/onion.png";
 const COLORS = {
   heading: "#3E3F5B",
   accent: "#AAB396",
@@ -55,7 +54,7 @@ export default function Onion() {
             data-aos="fade-left  "
           >
             <img
-              src={hen}
+              src={o1}
               alt="Onion"
               className="object-contain"
               style={{ width: 410, height: 410, maxWidth: "100%" }}

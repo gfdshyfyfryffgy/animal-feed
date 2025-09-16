@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.jpg";
+import r1 from "../assets/products/redchili.png";
 
 const COLORS = {
   heading: "#3E3F5B",
@@ -11,14 +11,15 @@ const COLORS = {
   tableBorder: "#3E3F5B",
 };
 
-const garlicDetails = [
-  { type: "Form", details: "Whole Bulbs / Peeled Garlic / Flakes" },
-  { type: "Color", details: "White & Creamy" },
-  { type: "Pungency", details: "Strong Aroma & Taste" },
-  { type: "Storage", details: "Humidity Controlled, Chilled Storage" },
-  { type: "Moisture", details: "Below 65%" },
-  { type: "Use Cases", details: "Culinary, Medicinal, Processed Food" },
-  { type: "Packing", details: "10kg / 25kg Gunny, Mesh Bags, Vacuum Packs" },
+// Spices product details
+const spicesDetails = [
+  { type: "Form", details: "Whole, Crushed, Powder" },
+  { type: "Color", details: "Bright Red" },
+  { type: "Pungency", details: "Hot & Spicy" },
+  { type: "Moisture", details: "Below 10%" },
+  { type: "Shelf Life", details: "12–18 months in sealed packaging" },
+  { type: "Use Cases", details: "Culinary, Sauces, Snacks, Industrial Processing" },
+  { type: "Packing", details: "5kg / 10kg / 25kg Bags, Vacuum Packs" },
 ];
 
 export default function Spices() {
@@ -37,7 +38,7 @@ export default function Spices() {
             </h1>
           </div>
           <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src={hen} alt="Garlic" className="object-contain" style={{ width: 410, height: 410 }} />
+            <img src={r1} alt="Spices" className="object-contain" style={{ width: 410, height: 410 }} />
           </div>
         </div>
       </div>
@@ -48,15 +49,16 @@ export default function Spices() {
           <div data-aos="fade-up">
             <h2 className="text-xl font-bold mb-3 text-[#40642C]">Spices Features</h2>
             <ul className="list-disc list-inside space-y-2 text-[#40642C] text-[1.08rem] font-medium">
-              <li>Whole and Peeled available</li>
-              <li>Natural aroma retained in cold storage</li>
-              <li>Preserved for health and kitchen use</li>
+              <li>Available in whole, crushed, and powdered forms</li>
+              <li>Rich natural color and aroma retained</li>
+              <li>Consistent pungency and quality</li>
+              <li>Ideal for culinary, industrial, and export use</li>
             </ul>
           </div>
           <div data-aos="fade-up" data-aos-delay="150">
-            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Chilled Garlic</h2>
+            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Spices</h2>
             <p className="text-[1.07rem] font-medium" style={{ color: COLORS.heading, lineHeight: 1.7 }}>
-              Our Spices products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
+              Our spices, including red chili, are carefully sourced from quality farms and processed under strict quality control. They are stored under optimal conditions to retain flavor, aroma, and color, making them ideal for culinary professionals, food processing, and export markets.
             </p>
           </div>
         </div>
@@ -74,7 +76,7 @@ export default function Spices() {
                 </tr>
               </thead>
               <tbody>
-                {garlicDetails.map((item, i) => (
+                {spicesDetails.map((item, i) => (
                   <tr key={i}>
                     <td style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: 500 }}>{item.type}</td>
                     <td style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px" }}>{item.details}</td>

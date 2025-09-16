@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.jpg";
+import d1 from "../assets/products/DehydratedProduct.png";
 
 const COLORS = {
   heading: "#3E3F5B",
@@ -11,14 +11,15 @@ const COLORS = {
   tableBorder: "#3E3F5B",
 };
 
-const garlicDetails = [
-  { type: "Form", details: "Whole Bulbs / Peeled Garlic / Flakes" },
-  { type: "Color", details: "White & Creamy" },
-  { type: "Pungency", details: "Strong Aroma & Taste" },
-  { type: "Storage", details: "Humidity Controlled, Chilled Storage" },
-  { type: "Moisture", details: "Below 65%" },
-  { type: "Use Cases", details: "Culinary, Medicinal, Processed Food" },
-  { type: "Packing", details: "10kg / 25kg Gunny, Mesh Bags, Vacuum Packs" },
+// Example dehydrated product details
+const dehydratedDetails = [
+  { type: "Form", details: "Flakes / Powder / Minced" },
+  { type: "Color", details: "Natural White / Off-White / Golden" },
+  { type: "Aroma", details: "Retains natural aroma" },
+  { type: "Moisture", details: "Below 8%" },
+  { type: "Shelf Life", details: "12–24 months in sealed packaging" },
+  { type: "Use Cases", details: "Culinary, Food Processing, Snacks, Seasoning" },
+  { type: "Packing", details: "10kg / 25kg Bags, Vacuum Packs" },
 ];
 
 export default function DehydratedProduct() {
@@ -32,12 +33,20 @@ export default function DehydratedProduct() {
       <div style={{ background: COLORS.background1, padding: "3.5rem 0" }}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-8">
           <div className="w-full md:w-1/2" data-aos="fade-right">
-            <h1 className="text-6xl font-extrabold" style={{ color: COLORS.heading }}>
-              DehydratedProduct
+            <h1
+              className="text-6xl font-extrabold"
+              style={{ color: COLORS.heading }}
+            >
+              Dehydrated Product
             </h1>
           </div>
           <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src={hen} alt="Garlic" className="object-contain" style={{ width: 410, height: 410 }} />
+            <img
+              src={d1}
+              alt="Dehydrated Product"
+              className="object-contain"
+              style={{ width: 410, height: 410 }}
+            />
           </div>
         </div>
       </div>
@@ -46,17 +55,36 @@ export default function DehydratedProduct() {
       <div style={{ background: COLORS.accent, padding: "3rem 0" }}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 px-6">
           <div data-aos="fade-up">
-            <h2 className="text-xl font-bold mb-3 text-[#40642C]">DehydratedProduct Features</h2>
+            <h2
+              className="text-xl font-bold mb-3 text-[#40642C]"
+            >
+              Dehydrated Product Features
+            </h2>
             <ul className="list-disc list-inside space-y-2 text-[#40642C] text-[1.08rem] font-medium">
-              <li>Whole and Peeled available</li>
-              <li>Natural aroma retained in cold storage</li>
-              <li>Preserved for health and kitchen use</li>
+              <li>Available in Flakes, Powder, or Minced form</li>
+              <li>Natural aroma and flavor retained</li>
+              <li>Long shelf life for storage and export</li>
+              <li>Ideal for food processing, seasoning, and snacks</li>
             </ul>
           </div>
           <div data-aos="fade-up" data-aos-delay="150">
-            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Chilled Garlic</h2>
-            <p className="text-[1.07rem] font-medium" style={{ color: COLORS.heading, lineHeight: 1.7 }}>
-              Our DehydratedProduct products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
+            <h2
+              className="text-xl font-bold mb-3"
+              style={{ color: COLORS.heading }}
+            >
+              About Dehydrated Product
+            </h2>
+            <p
+              className="text-[1.07rem] font-medium"
+              style={{ color: COLORS.heading, lineHeight: 1.7 }}
+            >
+              Our dehydrated products are made from carefully selected fresh
+              produce, processed under controlled conditions to remove moisture
+              while preserving natural flavor, color, and nutrients. Perfect
+              for culinary use, industrial food processing, seasoning blends,
+              and snacks, they offer long shelf life and convenient storage.
+              Available in bulk and retail-friendly packaging for domestic and
+              export markets.
             </p>
           </div>
         </div>
@@ -65,19 +93,56 @@ export default function DehydratedProduct() {
       {/* Table */}
       <div style={{ background: "#fff", padding: "3rem 0" }}>
         <div className="max-w-5xl mx-auto px-6" data-aos="fade-up">
-          <div style={{ overflowX: "auto", borderRadius: "10px", border: `1.5px solid ${COLORS.tableBorder}` }}>
+          <div
+            style={{
+              overflowX: "auto",
+              borderRadius: "10px",
+              border: `1.5px solid ${COLORS.tableBorder}`,
+            }}
+          >
             <table className="w-full text-sm text-left border-collapse">
               <thead>
                 <tr>
-                  <th style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: "bold" }}>TYPE</th>
-                  <th style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: "bold" }}>DETAILS</th>
+                  <th
+                    style={{
+                      border: `1px solid ${COLORS.tableBorder}`,
+                      padding: "10px 14px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    TYPE
+                  </th>
+                  <th
+                    style={{
+                      border: `1px solid ${COLORS.tableBorder}`,
+                      padding: "10px 14px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    DETAILS
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {garlicDetails.map((item, i) => (
+                {dehydratedDetails.map((item, i) => (
                   <tr key={i}>
-                    <td style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: 500 }}>{item.type}</td>
-                    <td style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px" }}>{item.details}</td>
+                    <td
+                      style={{
+                        border: `1px solid ${COLORS.tableBorder}`,
+                        padding: "10px 14px",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {item.type}
+                    </td>
+                    <td
+                      style={{
+                        border: `1px solid ${COLORS.tableBorder}`,
+                        padding: "10px 14px",
+                      }}
+                    >
+                      {item.details}
+                    </td>
                   </tr>
                 ))}
               </tbody>

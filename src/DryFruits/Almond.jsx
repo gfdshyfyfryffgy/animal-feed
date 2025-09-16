@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.jpg";
+import a1 from "../assets/products/almonds.png";
 
 const COLORS = {
   heading: "#3E3F5B",
@@ -37,7 +37,7 @@ export default function Almond() {
             </h1>
           </div>
           <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src={hen} alt="Garlic" className="object-contain" style={{ width: 410, height: 410 }} />
+            <img src={a1} alt="Garlic" className="object-contain" style={{ width: 410, height: 410 }} />
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function Almond() {
             </ul>
           </div>
           <div data-aos="fade-up" data-aos-delay="150">
-            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Chilled Garlic</h2>
+            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Almond</h2>
             <p className="text-[1.07rem] font-medium" style={{ color: COLORS.heading, lineHeight: 1.7 }}>
               Our Almond products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
             </p>

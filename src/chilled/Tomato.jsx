@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import hen from "../assets/hen.jpg"; // Replace with actual tomato image path
 import AOS from "aos";
 import "aos/dist/aos.css";
+import t1 from "../assets/products/tomato.png";
 
-// Brand colors reused from Potato.js
+
 const COLORS = {
   heading: "#3E3F5B",
   accent: "#AAB396",
@@ -67,7 +68,7 @@ export default function Tomato() {
             data-aos-delay="150"
           >
             <img
-              src={hen}
+              src={t1}
               alt="Tomato"
               className="object-contain"
               style={{ width: 410, height: 410, maxWidth: "100%" }}

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import hen from "../assets/hen.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import p1 from "../assets/products/potato.png";
 // Brand colors
 const COLORS = {
   heading: "#3E3F5B",
@@ -62,7 +62,7 @@ export default function Potato() {
             data-aos-delay="150"
           >
             <img
-              src={hen}
+              src={p1}
               alt="Potato"
               className="object-contain"
               style={{ width: 410, height: 410, maxWidth: "100%" }}

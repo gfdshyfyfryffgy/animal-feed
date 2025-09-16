@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import hen from "../assets/hen.png";
-import dog from "../assets/dog.jpg";
+import dog from "../assets/dogs.png";
 import certificate1 from "../assets/certificate1.jpg";
 import certificate2 from "../assets/certificate2.jpg";
 import certificate3 from "../assets/certificate3.jpg";

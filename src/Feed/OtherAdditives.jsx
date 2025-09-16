@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.jpg";
+
 
 const COLORS = {
   heading: "#3E3F5B",
@@ -30,15 +30,13 @@ export default function OtherAdditives() {
     <div>
       {/* Heading + Image */}
       <div style={{ background: COLORS.background1, padding: "3.5rem 0" }}>
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-8">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-8 mt-40 text-center mr-1">
           <div className="w-full md:w-1/2" data-aos="fade-right">
             <h1 className="text-6xl font-extrabold" style={{ color: COLORS.heading }}>
               OtherAdditives
             </h1>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src={hen} alt="Garlic" className="object-contain" style={{ width: 410, height: 410 }} />
-          </div>
+          
         </div>
       </div>
 
@@ -54,7 +52,7 @@ export default function OtherAdditives() {
             </ul>
           </div>
           <div data-aos="fade-up" data-aos-delay="150">
-            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Chilled Garlic</h2>
+            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Other Additives</h2>
             <p className="text-[1.07rem] font-medium" style={{ color: COLORS.heading, lineHeight: 1.7 }}>
               Our OtherAdditives products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
             </p>

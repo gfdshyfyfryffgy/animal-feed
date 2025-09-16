@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hen from "../assets/hen.jpg";
+import h1 from "../assets/products/garlic.png";
 
 const COLORS = {
   heading: "#3E3F5B",
@@ -32,12 +32,23 @@ export default function Chilled() {
       <div style={{ background: COLORS.background1, padding: "3.5rem 0" }}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-8">
           <div className="w-full md:w-1/2" data-aos="fade-right">
-            <h1 className="text-6xl font-extrabold" style={{ color: COLORS.heading }}>
-              Chilled 
+            <h1
+              className="text-6xl font-extrabold"
+              style={{ color: COLORS.heading }}
+            >
+              Chilled
             </h1>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src={hen} alt="Garlic" className="object-contain" style={{ width: 410, height: 410 }} />
+          <div
+            className="w-full md:w-1/2 flex justify-center"
+            data-aos="fade-left"
+          >
+            <img
+              src={h1}
+              alt="Garlic"
+              className="object-contain"
+              style={{ width: 410, height: 410 }}
+            />
           </div>
         </div>
       </div>
@@ -46,17 +57,39 @@ export default function Chilled() {
       <div style={{ background: COLORS.accent, padding: "3rem 0" }}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 px-6">
           <div data-aos="fade-up">
-            <h2 className="text-xl font-bold mb-3 text-[#40642C]">Chilled Garlic Features</h2>
+            <h2 className="text-xl font-bold mb-3 text-[#40642C]">
+              Chilled Garlic Features
+            </h2>
             <ul className="list-disc list-inside space-y-2 text-[#40642C] text-[1.08rem] font-medium">
               <li>Whole and Peeled available</li>
               <li>Natural aroma retained in cold storage</li>
               <li>Preserved for health and kitchen use</li>
             </ul>
           </div>
+
+          {/* ✅ Updated About Section */}
           <div data-aos="fade-up" data-aos-delay="150">
-            <h2 className="text-xl font-bold mb-3" style={{ color: COLORS.heading }}>About Chilled Garlic</h2>
-            <p className="text-[1.07rem] font-medium" style={{ color: COLORS.heading, lineHeight: 1.7 }}>
-              Our Chilled products are stored under strict chilling conditions, locking flavor and extending shelf life. Ideal for bulk packaging, exports, and food processing.
+            <h2
+              className="text-xl font-bold mb-3"
+              style={{ color: COLORS.heading }}
+            >
+              About Chilled Garlic
+            </h2>
+            <p
+              className="text-[1.07rem] font-medium"
+              style={{ color: COLORS.heading, lineHeight: 1.7 }}
+            >
+              Chilled garlic is preserved under controlled low-temperature
+              conditions to maintain its natural aroma, pungency, and nutrition.
+              By slowing spoilage, chilling extends shelf life while keeping
+              garlic fresh and flavorful. This makes it ideal for{" "}
+              <strong>exports, bulk packaging, food processors, and culinary
+              businesses</strong> that demand reliable, high-quality ingredients.
+              <br />
+              <br />
+              With modern storage facilities and careful handling, our chilled
+              garlic guarantees premium quality, superior taste retention, and
+              longer usability compared to regular storage methods.
             </p>
           </div>
         </div>
@@ -65,19 +98,56 @@ export default function Chilled() {
       {/* Table */}
       <div style={{ background: "#fff", padding: "3rem 0" }}>
         <div className="max-w-5xl mx-auto px-6" data-aos="fade-up">
-          <div style={{ overflowX: "auto", borderRadius: "10px", border: `1.5px solid ${COLORS.tableBorder}` }}>
+          <div
+            style={{
+              overflowX: "auto",
+              borderRadius: "10px",
+              border: `1.5px solid ${COLORS.tableBorder}`,
+            }}
+          >
             <table className="w-full text-sm text-left border-collapse">
               <thead>
                 <tr>
-                  <th style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: "bold" }}>TYPE</th>
-                  <th style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: "bold" }}>DETAILS</th>
+                  <th
+                    style={{
+                      border: `1px solid ${COLORS.tableBorder}`,
+                      padding: "10px 14px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    TYPE
+                  </th>
+                  <th
+                    style={{
+                      border: `1px solid ${COLORS.tableBorder}`,
+                      padding: "10px 14px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    DETAILS
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {garlicDetails.map((item, i) => (
                   <tr key={i}>
-                    <td style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px", fontWeight: 500 }}>{item.type}</td>
-                    <td style={{ border: `1px solid ${COLORS.tableBorder}`, padding: "10px 14px" }}>{item.details}</td>
+                    <td
+                      style={{
+                        border: `1px solid ${COLORS.tableBorder}`,
+                        padding: "10px 14px",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {item.type}
+                    </td>
+                    <td
+                      style={{
+                        border: `1px solid ${COLORS.tableBorder}`,
+                        padding: "10px 14px",
+                      }}
+                    >
+                      {item.details}
+                    </td>
                   </tr>
                 ))}
               </tbody>
