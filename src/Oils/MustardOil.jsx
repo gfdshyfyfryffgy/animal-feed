@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import m1 from "../assets/products/MustardOil.png";
+import m1 from "../assets/products/mustardoil.png";
 
 const COLORS = {
   heading: "#3E3F5B",
